@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.dialogs.ExitDialog"
+    app:cardCornerRadius="@dimen/_20sdp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/exit_dialog_btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:src="@drawable/ic_exit"
+            app:civ_circle_background_color="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/give_up"
+            android:lines="2"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exit_dialog_btn_exit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit_dialog_btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tv_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/exit_dialog_btn_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/no"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/shape_start_btn"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exit_dialog_btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tv_exit"
+            app:layout_constraintEnd_toStartOf="@+id/exit_dialog_btn_no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/ok"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/google_btn_shape"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

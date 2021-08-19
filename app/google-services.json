@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1044172108419",
+    "firebase_url": "https://challengers-b4561.firebaseio.com",
+    "project_id": "challengers-b4561",
+    "storage_bucket": "challengers-b4561.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044172108419:android:d4c36b86ab8d93021f61b6",
+        "android_client_info": {
+          "package_name": "com.cops.challengers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044172108419-sal3i0990s8jq5upjjs7n09qmlbdvsfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyeOVPE5MnicV2GhQD2ZNjhHOOZncr7Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044172108419-sal3i0990s8jq5upjjs7n09qmlbdvsfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

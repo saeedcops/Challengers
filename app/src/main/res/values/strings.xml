@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Challengers</string>
+    <string name="facebook_app_id">1088931638137136</string>
+    <string name="fb_login_protocol_scheme">fb1088931638137136</string>
+
+    <string name="onetoone">One to One</string>
+    <string name="playfriend">Play with friend</string>
+    <string name="offline">Offline</string>
+    <string name="settings">Settings</string>
+    <string name="sound">Sound</string>
+    <string name="language">App Language</string>
+    <string name="theme">Theme</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="notification">Notification</string>
+    <string name="logout">Logout</string>
+    <string name="category">Category</string>
+    <string name="start">Start</string>
+    <string name="select_all">Select All</string>
+    <string name="bet">Choose Bet</string>
+    <string name="islam">Islam</string>
+    <string name="math">Math</string>
+    <string name="historical">Historical</string>
+    <string name="puzzle">Puzzle</string>
+    <string name="science">Science</string>
+    <string name="sport">Sport</string>
+    <string name="technology">Technology</string>
+    <string name="geographic">Geographic</string>
+    <string name="winner_gets">WINNER GETS</string>
+    <string name="select_category">Please Select Category</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="play_again">Play Again!</string>
+    <string name="home">Home</string>
+    <string name="at_least_select_category">At least Select one Category</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_in_facebook">Login with\nFacebook</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name">Name</string>
+    <string name="email_not_valid">Email is not valid</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="no_enough_coins">you don\'t have enough coins</string>
+    <string name="you_win">YOU WIN</string>
+    <string name="you_loss">YOU LOSS</string>
+    <string name="profile">Profile</string>
+    <string name="gold">Current Gold</string>
+    <string name="score">Score</string>
+    <string name="match">Total Challenge</string>
+    <string name="win">Total Winning</string>
+    <string name="loss">Total Loss</string>
+    <string name="league">League</string>
+    <string name="save">Save</string>
+    <string name="question_language">Questions Language</string>
+    <string name="daily_gift">Daily Gift</string>
+    <string name="ok">OK</string>
+    <string name="give_up">Give up</string>
+    <string name="no">No</string>
+    <string name="gived_up">Gave up!</string>
+    <string name="watch">Watch</string>
+    <string name="watch_advert">Watch advertising video and get free Gems and coins One video = 1 Gem + 250 gold</string>
+    <string name="video_gift">Video Gift</string>
+    <string name="sign_in_guest">Login as a Guest</string>
+    <string name="play_offline">Play Offline</string>
+    <string name="click_gift">Click on the Gift</string>
+    <string name="prize">Prize :</string>
+    <string name="total">Total Earning :</string>
+    <string name="next_league">Next League :</string>
+    <string name="rank">Rank :</string>
+    <string name="invite">Invite</string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="later">Later</string>
+    <string name="facebook_message">log in with Facebook to challenge your friends and get 5 gems</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="challenged_for">Challenged for :</string>
+    <string name="challenge">Challenge</string>
+    <string name="no_gems">No Gems Enough</string>
+    <string name="end_friday">Ends on Friday</string>
+    <string name="delete_account">Are you Sure your Account will be Deleted?</string>
+    <string name="no_friend_to_challenge">No Friend to Challenge</string>
+    <string name="level_up">Level up</string>
+    <string name="draw">Draw</string>
+    <string name="cancel">Cancel</string>
+    <string name="rules">Rules</string>
+    <string name="prizes">Prizes</string>
+    <string name="bronze">Bronze</string>
+    <string name="silver">Silver</string>
+    <string name="golds">Gold</string>
+
+    <string name="diamond">Diamond</string>
+    <string name="legendary">Legendary</string>
+    <string name="bronze_prize">Rank 1 prize = 10 Gems \nRank 2 prize = 5 Gems \nRank 3,4,5 prize = 2 Gems \n</string>
+    <string name="silver_prize">Rank 1 prize = 20 Gems \nRank 2 prize = 10 Gems \nRank 3,4,5 prize = 5 Gems \n</string>
+    <string name="gold_prize">Rank 1 prize = 30 Gems \nRank 2 prize = 15 Gems \nRank 3,4,5 prize = 8 Gems \n</string>
+    <string name="diamond_prize">Rank 1 prize = 60 Gems \nRank 2 prize = 30 Gems \nRank 3,4,5 prize = 15 Gems \n</string>
+    <string name="legendary_prize">Rank 1 prize = 120 Gems \nRank 2 prize = 60 Gems \nRank 3,4,5 prize = 30 Gems \n</string>
+    <string name="league_rule">All Leagues end in a week, you have to win as many challenges as possible to get the prize, the challengers who got many coins will be the winners, Facebook challenges are not calculated.</string>
+    <string name="download_questions">Download Questions</string>
+    <string name="download">Downloading..</string>
+    <string name="download_questions_online">Download Questions to play offline</string>
+    <string name="number_of_questions">Number of questions</string>
+    <string name="time_out">time out</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/table_write_adapter_tv"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:text="S"
+        android:textSize="@dimen/_20ssp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:background="@drawable/shape_write_card"/>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:layout_margin="@dimen/_2sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:layout_margin="@dimen/_3sdp"
+        >
+
+
+
+    <RelativeLayout
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/google_btn_shape"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/result_adapter_tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/_15ssp"
+            android:layout_margin="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/result_adapter_tv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_question"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/_13ssp"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/result_adapter_tv_answer_offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_question"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="@dimen/_13ssp"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/result_adapter_tv_p1_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_question"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorBlack"
+
+            android:textSize="@dimen/_13ssp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/result_adapter_tv_answer"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/result_adapter_tv_p2_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_question"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorBlack"
+
+            android:textSize="@dimen/_13ssp"
+            android:layout_toEndOf="@+id/result_adapter_tv_answer"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/result_adapter_tv_p1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_p1_answer"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorBlack"
+
+            android:textSize="@dimen/_15ssp"
+            android:layout_toStartOf="@+id/result_adapter_tv_answer"
+            android:layout_margin="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/result_adapter_tv_p2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/result_adapter_tv_p2_answer"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorBlack"
+
+            android:textSize="@dimen/_15ssp"
+            android:layout_toEndOf="@+id/result_adapter_tv_answer"
+            android:layout_margin="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:textColor="@color/colorBlack"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_alignParentTop="true"/>
+
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

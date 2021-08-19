@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="btn_facebook">
+        <item name="android:background">@drawable/facebook_btn_shape</item>
+
+        <item name="android:shadowColor">#4267B2</item>
+        <item name="android:drawableStart">@drawable/ic_facebook</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+
+    <style name="btn_google">
+        <item name="android:background">@drawable/google_btn_shape</item>
+
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:shadowColor">@color/colorPrimary</item>
+<!--        <item name="android:drawableStart">@drawable/ic_google</item>-->
+        <item name="android:textColor">#000</item>
+        <item name="android:padding">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="iv_league">
+        <item name="android:background">@drawable/iv_league_shape</item>
+        <item name="android:textAppearance"> @style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:shadowColor">@color/colorPrimary</item>
+        <!--        <item name="android:drawableStart">@drawable/ic_google</item>-->
+        <item name="android:textColor">#000</item>
+
+    </style>
+
+
+</resources>

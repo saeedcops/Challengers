@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg7">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/category_fragment_civ_exit"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_10sdp"
+        app:civ_circle_background_color="#fff"
+        android:src="@drawable/ic_exit" />
+
+
+    <RelativeLayout
+        android:id="@+id/category_fragment_rv_online"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/category_fragment_civ_exit"
+       >
+    <TextView
+        android:id="@+id/category_fragment_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/shape_start_btn"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/category_fragment_tv_count"
+        android:layout_below="@+id/category_fragment_tv_title"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/vsbg"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/category"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvselect"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toStartOf="@+id/category_fragment_ck_all"-->
+<!--            android:text="@string/select_all"-->
+<!--            android:textSize="@dimen/_20ssp" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/category_fragment_ck_all"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:checked="true" />-->
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_fragment_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvcategory"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/category_fragment_tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/card"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/shape_start_btn"
+        android:text="@string/bet"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_above="@+id/category_fragment_btn_start"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cost_card">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/category_fragment_civ_remove"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/remove" />
+
+            <TextView
+                android:id="@+id/category_fragment_tv_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="500"
+                android:textColor="@color/colorBlack"
+                android:textAlignment="center"
+                android:textSize="@dimen/_30ssp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/category_fragment_civ_add"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/add" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/category_fragment_btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/shape_start_btn"
+        android:text="@string/start" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/category_fragment_rv_offline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/category_fragment_civ_exit"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/category_fragment_ci_download"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_file_download"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/circle_empty"
+            android:padding="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/category_fragment_tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/category_fragment_ci_download"
+            android:textAlignment="center"
+            android:text="@string/download_questions"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/category_fragment_progress_download"
+
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/category_fragment_tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_5sdp"
+            android:visibility="gone"
+            android:layout_below="@+id/category_fragment_progress_download"
+            android:text="@string/download"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

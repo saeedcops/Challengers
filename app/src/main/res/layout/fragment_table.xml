@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg9"
+    android:padding="@dimen/_5sdp"
+    tools:context=".view.fragments.TableFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/table_fragment_vs"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/vs_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/vs_fragment_tv_prize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/winner_gets"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/vs_fragment_tv_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/splash_vs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:textSize="@dimen/_30ssp"
+            android:textColor="@color/colorBlack"
+
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/splash_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="VS"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_40ssp"
+            android:textStyle="bold"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vs_fragment_image_sender"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+
+            app:layout_constraintEnd_toStartOf="@+id/splash_vs"
+            app:layout_constraintTop_toTopOf="@+id/splash_vs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:civ_circle_background_color="@color/colorDivider"/>
+
+        <TextView
+            android:id="@+id/vs_fragment_tv_score_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@+id/vs_fragment_image_sender"
+            app:layout_constraintTop_toTopOf="@+id/vs_fragment_image_sender"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/circle_yellow"
+            android:textSize="@dimen/_15ssp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/vs_fragment_sender_ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vs_fragment_image_sender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/splash_vs"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:ccp_clickable="false"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showNameCode="false"
+            app:ccp_showFullName="false"
+            app:ccp_showArrow="false"
+            app:ccpDialog_showTitle="false"
+            app:ccpDialog_showNameCode="false"
+            />
+
+        <TextView
+            android:id="@+id/vs_fragment_tv_sender_name"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vs_fragment_sender_ccp"
+            app:layout_constraintEnd_toStartOf="@+id/splash_vs"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/vs_fragment_image_receiver"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/splash_vs"
+            app:layout_constraintStart_toEndOf="@+id/splash_vs"
+            app:civ_circle_background_color="@color/colorDivider"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vs_fragment_btn_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invite"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_answer_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_vs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/splash_vs"
+            app:layout_constraintStart_toEndOf="@+id/splash_vs"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/vs_fragment_progress"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/splash_vs"
+            app:layout_constraintStart_toEndOf="@+id/splash_vs"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/search" />
+
+
+        <TextView
+            android:id="@+id/vs_fragment_tv_score_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@+id/vs_fragment_image_receiver"
+            app:layout_constraintTop_toTopOf="@+id/vs_fragment_image_receiver"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/circle_yellow"
+            android:textSize="@dimen/_15ssp" />
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/vs_fragment_receiver_ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vs_fragment_image_receiver"
+            app:layout_constraintStart_toEndOf="@+id/splash_vs"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:ccp_clickable="false"
+            android:visibility="gone"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showNameCode="false"
+            app:ccp_showFullName="false"
+            app:ccp_showArrow="false"
+            app:ccpDialog_showTitle="false"
+            app:ccpDialog_showNameCode="false"
+            />
+
+        <TextView
+            android:id="@+id/vs_fragment_tv_receiver_name"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/vs_fragment_receiver_ccp"
+            app:layout_constraintStart_toEndOf="@+id/splash_vs"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLength="12"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13ssp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    table -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/table_fragment_table"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+
+    <ProgressBar
+        android:id="@+id/table_fragment_progressBar_receiver"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:progressDrawable="@drawable/circular_progress"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/table_fragment_progressBar_sender"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_margin="@dimen/_10sdp"
+
+        android:progressDrawable="@drawable/circular_progress"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/table_fragment_image_sender"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/geographic"
+        app:civ_circle_background_color="@color/colorDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintEnd_toEndOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintStart_toStartOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintTop_toTopOf="@+id/table_fragment_progressBar_sender" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/table_fragment_image_receiver"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/technology"
+        app:civ_circle_background_color="@color/colorDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/table_fragment_progressBar_receiver"
+        app:layout_constraintEnd_toEndOf="@+id/table_fragment_progressBar_receiver"
+        app:layout_constraintStart_toStartOf="@+id/table_fragment_progressBar_receiver"
+        app:layout_constraintTop_toTopOf="@+id/table_fragment_progressBar_receiver" />
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/table_fragment_sender_ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintStart_toStartOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_progressBar_sender"
+        app:ccp_clickable="false"
+        app:ccp_showPhoneCode="false"
+        app:ccp_showNameCode="false"
+        app:ccp_showFullName="false"
+        app:ccp_showArrow="false"
+        app:ccpDialog_showTitle="false"
+        app:ccpDialog_showNameCode="false"
+        />
+
+    <TextView
+        android:id="@+id/table_fragment_tv_sender_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:maxLength="12"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/table_fragment_tv_question_number"
+        app:layout_constraintStart_toStartOf="@+id/table_fragment_progressBar_sender"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_sender_ccp" />
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/table_fragment_receiver_ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/table_fragment_progressBar_receiver"
+        app:layout_constraintStart_toStartOf="@+id/table_fragment_progressBar_receiver"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_progressBar_receiver"
+        app:ccp_clickable="false"
+        app:ccp_showPhoneCode="false"
+        app:ccp_showNameCode="false"
+        app:ccp_showFullName="false"
+        app:ccp_showArrow="false"
+        app:ccpDialog_showTitle="false"
+        app:ccpDialog_showNameCode="false"
+        />
+
+    <TextView
+        android:id="@+id/table_fragment_tv_receiver_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="@dimen/_13ssp"
+        android:maxLength="12"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorBlack"
+        android:gravity="end"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/table_fragment_image_receiver"
+        app:layout_constraintStart_toEndOf="@+id/table_fragment_tv_question_number"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_receiver_ccp" />
+
+    <TextView
+        android:id="@+id/table_fragment_tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="4 - 6"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/table_fragment_receiver_ccp"
+        app:layout_constraintEnd_toStartOf="@id/table_fragment_progressBar_receiver"
+        app:layout_constraintStart_toEndOf="@id/table_fragment_progressBar_sender" />
+
+    <TextView
+        android:id="@+id/table_fragment_tv_question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:padding="@dimen/_5sdp"
+        android:text="1/10"
+        android:textSize="@dimen/_17ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/table_fragment_card_write"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_result" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/table_fragment_card_write"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/table_adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_receiver_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/table_fragment_cl_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_card"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/table_fragment_iv_choose_trick"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_trick"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_choose_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iv_league_shape"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryText"
+                app:layout_constraintBottom_toTopOf="@+id/table_fragment_tv_question"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/table_fragment_iv_choose_gem"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/gem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_choose_gem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_14ssp"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toStartOf="@+id/table_fragment_iv_choose_gem"
+                app:layout_constraintBottom_toBottomOf="@+id/table_fragment_iv_choose_gem"
+                app:layout_constraintTop_toTopOf="@+id/table_fragment_iv_choose_gem"
+                />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_question"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_cost_card"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_15ssp"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/table_fragment_btn_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_choose_category"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/table_fragment_btn_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/shape_answer_btn"
+                app:layout_constraintEnd_toStartOf="@+id/table_fragment_btn_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_question" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/table_fragment_btn_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/shape_answer_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/table_fragment_btn_1"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_question" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/table_fragment_btn_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/shape_answer_btn"
+                app:layout_constraintEnd_toStartOf="@+id/table_fragment_btn_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_btn_1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/table_fragment_btn_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/shape_answer_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/table_fragment_btn_3"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_btn_2" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_btn_4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/table_fragment_cl_write"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_card"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/table_fragment_iv_write_trick"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_trick"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_alignParentStart="true" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/table_fragment_iv_write_gem"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/gem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_write_gem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_14ssp"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:text="55"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toStartOf="@+id/table_fragment_iv_write_gem"
+                app:layout_constraintBottom_toBottomOf="@+id/table_fragment_iv_write_gem"
+                app:layout_constraintTop_toTopOf="@+id/table_fragment_iv_write_gem"
+                />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_write_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iv_league_shape"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryText"
+                app:layout_constraintBottom_toTopOf="@+id/table_fragment_tv_question_write"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/table_fragment_tv_question_write"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_cost_card"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/table_fragment_tv_write"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_write_category"
+
+                />
+
+            <ImageView
+                android:id="@+id/table_fragment_civ_cancel"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_exit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/table_fragment_tv_write"
+                app:layout_constraintTop_toTopOf="@+id/table_fragment_tv_write" />
+
+            <ImageView
+                android:id="@+id/table_fragment_civ_check"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+
+                android:src="@drawable/ic_check_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/table_fragment_tv_write"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_civ_cancel" />
+
+
+            <TextView
+                android:id="@+id/table_fragment_tv_write"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/shape_write_card"
+                android:focusable="true"
+                android:hint="@string/your_answer"
+                android:padding="@dimen/_15sdp"
+                android:textAlignment="center"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintBottom_toTopOf="@+id/table_fragment_rv_choose"
+                app:layout_constraintEnd_toStartOf="@+id/table_fragment_civ_cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_question_write" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/table_fragment_rv_choose"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_fragment_tv_write" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/table_adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-8148071716960089/8579995692">
+        </com.google.android.gms.ads.AdView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

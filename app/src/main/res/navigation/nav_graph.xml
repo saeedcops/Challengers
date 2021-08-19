@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.cops.challengers.view.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/nav_graph.xml" />
+        <action
+            android:id="@+id/action_splashFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cops.challengers.view.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/homeFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="flag"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="coin"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="gem"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationDialog"
+            app:destination="@id/notificationDialog"
+            app:enterAnim="@anim/slide_down_page"
+            app:exitAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_up_page" />
+        <action
+            android:id="@+id/action_homeFragment_to_tableFragment"
+            app:destination="@id/tableFragment"
+            app:enterAnim="@anim/slide_up_page"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_down_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.cops.challengers.view.fragments.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <argument
+            android:name="mode"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="coins"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="userID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="flag"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="qsnLang"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="sound"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_categoryFragment_to_tableFragment"
+            app:destination="@id/tableFragment"
+            app:enterAnim="@anim/slide_up_page"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_down_page"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="profileId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_categoryFragment_to_notificationDialog"
+            app:destination="@id/notificationDialog" />
+        <action
+            android:id="@+id/action_categoryFragment_to_offlineTableFragment"
+            app:destination="@id/offlineTableFragment"
+            app:enterAnim="@anim/slide_up_page"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/slide_down_page"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="home"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tableFragment"
+        android:name="com.cops.challengers.view.fragments.TableFragment"
+        android:label="fragment_table"
+        tools:layout="@layout/fragment_table" >
+        <action
+            android:id="@+id/action_tableFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_down_page"
+            app:popEnterAnim="@anim/slide_up_page"
+            app:popUpTo="@+id/homeFragment" />
+        <argument
+            android:name="userID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="qsnLang"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="sound"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_tableFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_down_page"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="bet"
+            app:argType="integer"
+            android:defaultValue="500" />
+        <argument
+            android:name="flag"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="mode"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="profileId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="roomId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_tableFragment_to_notificationDialog"
+            app:destination="@id/notificationDialog" />
+        <argument
+            android:name="friendId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.cops.challengers.view.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_down_page"
+            app:popUpTo="@+id/homeFragment" />
+        <argument
+            android:name="roomID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="sound"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="qsnLang"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="win"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="isRandom"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="profileId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_resultFragment_to_notificationDialog"
+            app:destination="@id/notificationDialog"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/notificationDialog"
+        android:name="com.cops.challengers.view.dialogs.NotificationDialog"
+        android:label="dialog_notification"
+        tools:layout="@layout/dialog_notification" >
+        <action
+            android:id="@+id/action_notificationDialog_to_tableFragment"
+            app:destination="@id/tableFragment"
+            app:enterAnim="@anim/slide_up_page"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_down_page"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="bet"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="room_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="sound"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="qsnLang"
+            app:argType="string"
+            android:defaultValue="ar" />
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="profileId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="mode"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="flag"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="level"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </dialog>
+    <fragment
+        android:id="@+id/offlineTableFragment"
+        android:name="com.cops.challengers.view.fragments.OfflineTableFragment"
+        android:label="fragment_offline_table"
+        tools:layout="@layout/fragment_offline_table" >
+        <argument
+            android:name="qty"
+            app:argType="integer"
+            android:defaultValue="5" />
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="lang"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="sound"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_offlineTableFragment_to_offlineResultFragment"
+            app:destination="@id/offlineResultFragment"
+            app:enterAnim="@anim/slide_down_page"
+            app:popEnterAnim="@anim/slide_up_page"
+            app:popUpTo="@+id/categoryFragment" />
+        <argument
+            android:name="home"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/offlineResultFragment"
+        android:name="com.cops.challengers.view.fragments.OfflineResultFragment"
+        android:label="OfflineResultFragment" >
+        <argument
+            android:name="result_id"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="correct"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="home"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_offlineResultFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_down_page"
+            app:popUpTo="@+id/homeFragment" />
+    </fragment>
+</navigation>

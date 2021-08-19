@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_fragment_iv_league_1"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/bronze"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/bronze"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_iv_league_1"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/prize_fragment_tv_league_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/bronze_prize"
+            android:layout_toEndOf="@+id/prize_fragment_iv_league_1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewl1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_tv_league_1"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_fragment_iv_league_2"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/silver"
+            android:layout_below="@+id/viewl1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/silver"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/_5sdp"
+
+            android:layout_below="@+id/prize_fragment_iv_league_2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prize_fragment_tv_league_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/silver_prize"
+            android:layout_below="@+id/viewl1"
+            android:layout_toEndOf="@+id/prize_fragment_iv_league_2"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewl2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_tv_league_2"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_fragment_iv_league_3"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/gold"
+            android:layout_below="@+id/viewl2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/golds"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_iv_league_3"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/prize_fragment_tv_league_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/gold_prize"
+            android:layout_below="@+id/viewl2"
+            android:layout_toEndOf="@+id/prize_fragment_iv_league_3"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewl3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_tv_league_3"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_fragment_iv_league_4"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/diamond"
+            android:layout_below="@+id/viewl3"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:text="@string/diamond"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_iv_league_4"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/prize_fragment_tv_league_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/diamond_prize"
+            android:layout_below="@+id/viewl3"
+            android:layout_toEndOf="@+id/prize_fragment_iv_league_4"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/viewl4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_tv_league_4"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_fragment_iv_league_5"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/legendary"
+            android:layout_below="@+id/viewl4"
+            />
+        <TextView
+            android:id="@+id/legendary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:text="@string/legendary"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/prize_fragment_iv_league_5"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/prize_fragment_tv_league_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/legendary_prize"
+            android:layout_below="@+id/viewl4"
+            android:layout_toEndOf="@+id/prize_fragment_iv_league_5"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>

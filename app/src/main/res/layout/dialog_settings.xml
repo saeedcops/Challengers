@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_10sdp"
+
+            android:background="@drawable/shape_dialog"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/settings"
+                android:textSize="@dimen/_20ssp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textStyle="bold"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/settings_dialog_btn_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_exit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:civ_circle_background_color="#fff"
+                android:layout_margin="@dimen/_2sdp"/>
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/settings_dialog_btn_sign_in_facebook"
+                style="@style/btn_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_settings"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settings_dialog_btn_logout"
+                style="@style/btn_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/settings_dialog_chk_notify"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorRed"
+                android:text="@string/logout" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settings_dialog_btn_sign_in_facebook"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+            <TextView
+                android:id="@+id/tv_app_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/language"
+                android:textSize="@dimen/_15ssp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settings_dialog_sp_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_app_lang"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_app_lang"
+                android:background="@drawable/shape_cost_card"
+                android:layout_margin="@dimen/_5sdp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_question_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/colorPrimaryText"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_lang"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/question_language"
+                android:textSize="@dimen/_15ssp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/settings_dialog_sp_question_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/shape_cost_card"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question_lang"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="@+id/tv_question_lang" />
+
+            <TextView
+                android:id="@+id/tv_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                app:layout_constraintTop_toBottomOf="@+id/tv_question_lang"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/sound"
+                android:textSize="@dimen/_15ssp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/settings_dialog_chk_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_sound"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_sound"
+                android:layout_margin="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/tv_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sound"
+                android:text="@string/notification"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_15ssp"
+                android:layout_margin="@dimen/_15sdp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/settings_dialog_chk_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_notify"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_notify"
+                android:layout_margin="@dimen/_10sdp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

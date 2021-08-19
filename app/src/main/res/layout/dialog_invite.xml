@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.dialogs.VideoDialog"
+    app:cardCornerRadius="@dimen/_20sdp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/_250sdp"
+        android:background="@drawable/shape_dialog"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/invite_dialog_btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:src="@drawable/ic_exit"
+            app:civ_circle_background_color="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_gift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/invite_friend"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="@+id/invite_dialog_btn_exit" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/invite_dialog_rv_category"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintBottom_toTopOf="@+id/invite_dialog_rv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gift"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:background="@drawable/google_btn_shape"
+            android:padding="@dimen/_5sdp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/invite_dialog_rv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintBottom_toTopOf="@+id/invite_dialog_rl"
+            app:layout_constraintTop_toBottomOf="@+id/invite_dialog_rv_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/shape_cost_card"
+            android:padding="@dimen/_5sdp"/>
+
+        <ImageView
+            android:id="@+id/invite_dialog_iv_no_friend"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_no_friend"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/invite_dialog_rv"
+            app:layout_constraintEnd_toEndOf="@+id/invite_dialog_rv"
+            app:layout_constraintTop_toTopOf="@+id/invite_dialog_rv"
+            app:layout_constraintBottom_toBottomOf="@+id/invite_dialog_rv"/>
+
+        <TextView
+            android:id="@+id/invite_dialog_tv_no_friend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/no_friend_to_challenge"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invite_dialog_iv_no_friend" />
+
+        <RelativeLayout
+            android:id="@+id/invite_dialog_rl"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/invite_dialog_rv"
+            app:layout_constraintEnd_toEndOf="@+id/invite_dialog_rv"
+            app:layout_constraintTop_toBottomOf="@+id/invite_dialog_rv"
+            android:background="@drawable/shape_cost_card">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/invite_fragment_civ_remove"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/remove" />
+
+            <TextView
+                android:id="@+id/invite_fragment_tv_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="500"
+                android:textColor="@color/colorBlack"
+                android:textAlignment="center"
+                android:textSize="@dimen/_20ssp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/invite_fragment_civ_add"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/add" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">المتحدون</string>
+    <string name="facebook_app_id">1088931638137136</string>
+    <string name="fb_login_protocol_scheme">fb1088931638137136</string>
+
+    <string name="onetoone">واحد لواحد</string>
+    <string name="playfriend">تحدي صديق</string>
+    <string name="offline">غير متصل</string>
+    <string name="settings">الضبط</string>
+    <string name="sound">الصوت</string>
+    <string name="language">لغة التطبيق</string>
+    <string name="theme">الموضوعات</string>
+    <string name="dark">غامق</string>
+    <string name="light">فاتح</string>
+    <string name="notification">الاشعارات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="category">الفئات</string>
+    <string name="start">ابدأ</string>
+    <string name="select_all">تحديد الكل</string>
+    <string name="bet">اختر القيمة</string>
+    <string name="islam">اسلامي</string>
+    <string name="math">رياضيات</string>
+    <string name="historical">تاريخي</string>
+    <string name="puzzle">الغاز</string>
+    <string name="science">علوم</string>
+    <string name="sport">رياضه</string>
+    <string name="technology">تكنولوجيا</string>
+    <string name="geographic">جغرافيا</string>
+    <string name="winner_gets">الفائز يحصل علي</string>
+    <string name="select_category">رجاءا اختر الفئة</string>
+    <string name="your_answer">حلك</string>
+    <string name="play_again">تحدي اخر</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="at_least_select_category">علي الاقل اختر فئة واحدة</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forget_password">نسيت كلمة المرور؟</string>
+    <string name="sign_in_facebook">ب الفيسبوك\nتسجيل الدخول </string>
+    <string name="sign_in_google">تسجيل الدخول بجوجل</string>
+    <string name="sign_up">انشاء حساب</string>
+    <string name="name">الاسم</string>
+    <string name="email_not_valid">بريد غير صالح</string>
+    <string name="enter_email">البريد الالكتروني</string>
+    <string name="enter_password">كلمة المرور</string>
+    <string name="enter_your_name">الاسم</string>
+    <string name="no_enough_coins">ليس لديك عملات كافيه</string>
+    <string name="you_win">لقد ربحت</string>
+    <string name="you_loss">لقد خسرت</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="gold">العملات الحالية</string>
+    <string name="score">درجة</string>
+    <string name="match">اجمالي التحديات</string>
+    <string name="win">الفوز</string>
+    <string name="loss">الخسائر</string>
+    <string name="league">الدوري</string>
+    <string name="save">حفظ</string>
+    <string name="question_language">لغة الاسئلة</string>
+    <string name="daily_gift">هدية يومية</string>
+    <string name="ok">حسنا</string>
+    <string name="give_up">استسلم</string>
+    <string name="no">لا</string>
+    <string name="gived_up">استسلم</string>
+    <string name="watch">شاهد</string>
+    <string name="watch_advert">شاهد فيديو اعلاني واحصل علي 250 عملة و واحد من الجواهر</string>
+    <string name="video_gift">هدية الفديو</string>
+    <string name="sign_in_guest">تسجيل الدخول كضيف</string>
+    <string name="play_offline">تحدي بدون شبكه</string>
+    <string name="click_gift">اضغط علي الهدية</string>
+    <string name="prize">الجائزة :</string>
+    <string name="total">اجمالي الارباح :</string>
+    <string name="next_league">الدوري القادم :</string>
+    <string name="rank">الترتيب :</string>
+    <string name="invite">تحدي</string>
+    <string name="invite_friend">تحدي صديق</string>
+    <string name="later">لاحقا</string>
+    <string name="facebook_message">سجل الدخول بواسطة فيسبوك لتتحدي اصدقائك واحصل علي خمسة جواهر اضافية</string>
+    <string name="accept">وافق</string>
+    <string name="reject">ارفض</string>
+    <string name="challenged_for">تحداك علي :</string>
+    <string name="challenge">تحدي</string>
+    <string name="no_gems">لايوجد جواهر كافية</string>
+    <string name="end_friday">ينتهي يوم الجمعة</string>
+    <string name="delete_account">هل انت متأكد سيتم حذف حسابك؟</string>
+    <string name="no_friend_to_challenge">لايوجد اصدقاء لتتحداهم</string>
+    <string name="level_up">مستوي جديد</string>
+    <string name="draw">تعادل</string>
+    <string name="cancel">اغلاق</string>
+    <string name="rules">القواعد</string>
+    <string name="prizes">الجوائز</string>
+    <string name="bronze">برونزي</string>
+    <string name="silver">فضي</string>
+    <string name="golds">ذهبي</string>
+
+    <string name="diamond">ماسي</string>
+    <string name="legendary">اسطوري</string>
+    <string name="bronze_prize">المركز الاول = 10 جواهر\nالمركز الثاني = 5 جواهر\nالمركز 3و4و5= 2 جواهر</string>
+    <string name="silver_prize">المركز الاول = 20 جواهر\nالمركز الثاني = 10 جواهر\nالمركز 3و4و5= 5 جواهر</string>
+    <string name="gold_prize">المركز الاول = 30 جواهر\nالمركز الثاني = 15 جواهر\nالمركز 3و4و5= 8 جواهر</string>
+
+    <string name="diamond_prize">المركز الاول = 60 جواهر\nالمركز الثاني = 30 جواهر\nالمركز 3و4و5= 15 جواهر</string>
+    <string name="legendary_prize">المركز الاول = 120 جواهر\nالمركز الثاني = 60 جواهر\nالمركز 3و4و5= 30 جواهر</string>
+    <string name="league_rule">تنتهي جميع الدوريات خلال أسبوع ، عليك الفوز بأكبر عدد ممكن من التحديات للحصول على الجائزة ، وسيكون المتنافسون الذين حصلوا على العديد من العملات المعدنية هم الفائزون ، ولا يتم حساب تحديات فيسبوك.</string>
+    <string name="download_questions">تحميل الاسئلة</string>
+    <string name="download_questions_online">حمل الاسئلة لتلعب بدون شبكه</string>
+    <string name="number_of_questions">عدد الاسئلة</string>
+    <string name="download">جاري التحميل..</string>
+    <string name="time_out">انتهي الوقت</string>
+
+</resources>
